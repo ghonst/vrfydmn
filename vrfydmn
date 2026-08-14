@@ -881,6 +881,10 @@ if __name__ == "__main__":
                         default=None,
                         help="Config file for a SQL connection (Currently "
                              "MySQL only)")
+    parser.add_argument("--sender-alignment", "-A",
+                        default=False,
+                        action="store_true",
+                        help="Checks if From: header domain and envelope sender domain are aligned")
     parser.add_argument("--memcached", "-m",
                         type=str,
                         default=None,
